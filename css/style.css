@@ -1,0 +1,23 @@
+html, 
+body {
+  height: 100%;
+  margin: 10px;
+  padding: 0;
+}
+.page-header{
+  background-color: cyan;
+}
+#sidebar{
+  background-color: orange;
+  border: 10px;
+}
+#top_row{
+  margin-top: 5%;
+}
+#map {
+  height: 50%;
+}
+.locationItems{
+  font-size: 14px;
+  color:#333;
+}
