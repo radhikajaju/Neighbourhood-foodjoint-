@@ -140,13 +140,13 @@ mapObj.openWindow = function(marker, status) { //open the GM tooltip
 //window.infoWindow.setContent($('#placeTmpl').html());
 
     function openWin() {
-        self.infowindow.close(); //close other infowindows first
+        //self.infowindow.close(); //close other infowindows first
         self.infowindow.open(self.canvasMap, marker); //open the window
         //$('#windowTool').empty(); //empty everything first
         //$('window.infoWindow.setContent($(.marker_title).html())' + marker.title + '</h4>' +
           //  '<h5>' + marker.description + '</h5></div>').appendTo('#windowTool'); //now add data
 
-        self.infowindow.setContent( '<h4>' + marker.title + '</h4>' + '<h5>' + marker.description + '</h5></div>');
+        self.infowindow.setContent( '<div><h4>' + marker.title + '</h4>' + '<h5>' + marker.description + '</h5></div>');
         }
 };
 
@@ -233,7 +233,6 @@ sidebarObj.selectLocation = function(element, domEl) { //perform some styling.
     console.log('element', element);
     console.log('domEl', domEl);
     var current = domEl.currentTarget;
-    $(current).css('color', '#fff').css('cursor', 'pointer').css('background-color', '#5CB85C');
     //sidebarObj.bounceMarker(element.locationName);
     showMarker(element.locationName);
 
