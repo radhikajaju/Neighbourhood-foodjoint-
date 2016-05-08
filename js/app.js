@@ -248,15 +248,6 @@ sidebarObj.selectLocation = function(element, domEl) { //perform some styling.
 };
 
 /**
- * @description Undo the selection in the list
- * @param {object} element - @location object
- * @param {jQuery object} domEl - returns if mouse is hoveredd
- */
-sidebarObj.selectLocationUndo = function(element, domEl) {
-    $(domEl.currentTarget).css('background-color', '#fff').css('color', '#333');
-};
-
-/**
  * @description Open the Popup Window for the selected location
  * @param {object} element - @location object
  * @param {jQuery object} domEl - returns if mouse is hoveredd
