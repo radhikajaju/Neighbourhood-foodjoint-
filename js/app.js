@@ -142,11 +142,11 @@ mapObj.openWindow = function(marker, status) { //open the GM tooltip
     function openWin() {
         self.infowindow.close(); //close other infowindows first
         self.infowindow.open(self.canvasMap, marker); //open the window
-        $('#windowTool').empty(); //empty everything first
-        $('window.infoWindow.setContent($(.marker_title).html())' + marker.title + '</h4>' +
-            '<h5>' + marker.description + '</h5></div>').appendTo('#windowTool'); //now add data
+        //$('#windowTool').empty(); //empty everything first
+        //$('window.infoWindow.setContent($(.marker_title).html())' + marker.title + '</h4>' +
+          //  '<h5>' + marker.description + '</h5></div>').appendTo('#windowTool'); //now add data
 
-        //self.infowindow.setContent( '<h4>' + marker.title + '</h4>' + '<h5>' + marker.description + '</h5></div>');
+        self.infowindow.setContent( '<h4>' + marker.title + '</h4>' + '<h5>' + marker.description + '</h5></div>');
         }
 };
 
