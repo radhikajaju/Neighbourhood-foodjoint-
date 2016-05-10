@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neighbourhood Map Food Joint Search</title>
-    <!-- Bootstrap, font and Style.css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="page-header">
-          <h1 class="head1">Gomti Nagar, Lucknow,India<small> | Check out interesting FOOD Joints in the neighbourhood</small></h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3" id="sidebar"> 
-            <form class="navbar-form">
-              <label for="search_f">Search neighbourhood</label>
-              <div class="input-group">
-                <input class="form-control" id="search_f" placeholder="Search.." type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off"/>
-              </div>
-            </form>
-          <ul class="locations list-group" data-bind="foreach: places">
-            <li class="list-group-item" id="location" data-bind="text:locationName
-                attr:{id: $index},
-                event:{ mouseover: sidebarObj.selectLocation, mouseout: sidebarObj.selectLocationUndo, click: sidebarObj.openWin}"></li>
-          </ul>
-        </div>
-        <div id="main_content" class="col-sm-9">
-          <div id="map" class="col-sm-12"></div>
-        </div>
-      </div>
-      </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    <!--KNOCKOUTJS -->
-    <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
-    <script type="text/javascript" src="js/app.js" async></script>
-    <!--google maps-->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKrvZMO5CHs_6aQ-tfTqA9_4jGaufmgKY&amp;region=NL&amp;callback=mapObj.initMap">
-    </script>
-  </body>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neighbourhood Map Food Joint Search</title>
+    	<!-- Bootstrap, font and Style.css -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  	</head>
+  	<body>
+    	<div class="container">
+      		<div class="row">
+        		<div class="page-header">
+        		<h1 class="head1">Gomti Nagar, Lucknow,India<small> | Check out interesting FOOD Joints in the neighbourhood</small></h1>
+        		</div>
+      		</div>
+      		<div class="row">
+        		<div class="col-sm-3" id="sidebar"> 
+            		<form class="navbar-form">
+              			<label for="search_f">Search neighbourhood</label>
+              			<div class="input-group">
+                			<input class="form-control" id="search_f" placeholder="Search.." type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off"/>
+              			</div>
+            		</form>
+          			<ul class="locations list-group" data-bind="foreach: places">
+            			<li class="list-group-item" id="location" data-bind="text:locationName, attr:{id: $index},event:{ mouseover: sidebarObj.selectLocation, mouseout: sidebarObj.selectLocationUndo, click: sidebarObj.openWin}">
+            			</li>
+          			</ul>
+        		</div>
+        		<div id="main_content" class="col-sm-9">
+          			<div id="map" class="col-sm-12"></div>
+        		</div>
+      		</div>
+      	</div>
+    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    	</script>
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    	<!--KNOCKOUTJS -->
+    	<script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+    	<script type="text/javascript" src="js/app.js" async></script>
+    	<!--google maps-->
+    	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKrvZMO5CHs_6aQ-tfTqA9_4jGaufmgKY&amp;region=NL&amp;callback=mapObj.initMap" onerror="googleError()"></script>
+    	<script>
+			function googleError() {
+    			alert("can't load the map");
+			}
+		</script>
+	</body>
 </html>
