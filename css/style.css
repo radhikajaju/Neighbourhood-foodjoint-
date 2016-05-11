@@ -7,17 +7,13 @@ body {
 .page-header{
   background-color: cyan;
 }
-#sidebar{
+.sidebar{
   background-color: orange;
   border: 10px;
-}
-#top_row{
-  margin-top: 5%;
 }
 #map {
   height: 50%;
 }
-.locationItems{
-  font-size: 14px;
-  color:#333;
+.col-sm-9{
+	margin-top:5px;"
 }
