@@ -348,10 +348,11 @@ photoObj.flickr = function(marker) {
                 self.infowindow.setContent('<span>' + 'Error occured retrieving photos' + '</span>');
             }
         }
-    );
+    ).error(function() {
+            alert('images cannot be displayed');
 
-    $(document).ajaxError(function() {
-        self.infowindow.setContent('<span>' + 'Error occured retrieving photos' + '</span>');
+    //$(document).ajaxError(function() {
+      //  self.infowindow.setContent('<span>' + 'Error occured retrieving photos' + '</span>');
     });
 
 };
